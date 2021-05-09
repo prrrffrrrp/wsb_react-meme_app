@@ -24,5 +24,6 @@ yarn-error.log*
 
 # c-tags
 tags
+tags*
 .tags
 tags/*
