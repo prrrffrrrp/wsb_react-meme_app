@@ -1,23 +1,38 @@
-import {BrowserRouter as Router, Switch, Route, Redirect, Link} from 'react-router-dom';
+import {BrowserRouter as Router, NavLink, Redirect, Route, Switch} from 'react-router-dom';
+import { useState } from "react";
 import './App.css';
 
+import { memeDb } from './memeDb';
 import Error from './components/error-component';
 import Hot from './components/hot-component';
 import Regular from './components/regular-component';
 
 
 function App() {
-  return (
+    const [memes, setMemes] = useState(memeDb);
+
+    const voteOnMeme = (memeId, vote) => {
+        const newMemes = [...memes];
+        const memeIndex = newMemes.findIndex(obj => obj.id === memeId)
+        if (vote === 'up') {
+            newMemes[memeIndex].upvotes += 1;
+        } else if ( vote === 'down' ) {
+            newMemes[memeIndex].downvotes += 1;
+        }
+        setMemes(memes => newMemes);
+    }
+
+    return (
     <div className="App">
         <Router>
                 <ul className="nav">
 
                     <li className="nav-item">
-                        <Link to='/hot'>Hot</Link>
+                        <NavLink to='/hot'>Hot</NavLink>
                     </li>
 
                     <li className="nav-item">
-                        <Link to='/regular'>Regular</Link>
+                        <NavLink to='/regular'>Regular</NavLink>
                     </li>
 
                 </ul>
@@ -25,11 +40,11 @@ function App() {
                 <Switch>
 
                     <Route exact path={['/', '/regular']}>
-                        <Regular/>
+                        <Regular memes={memes} voteOnMeme={voteOnMeme}/>
                     </Route>
 
                     <Route exact path='/hot'>
-                        <Hot/>
+                        <Hot memes={memes} voteOnMeme={voteOnMeme}/>
                     </Route>
 
                     <Route exact path='*'>
