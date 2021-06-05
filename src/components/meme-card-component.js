@@ -1,4 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
+import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
 
 export default function MemeCard(props) {
     const memeId = props.meme.id;
@@ -17,17 +19,17 @@ export default function MemeCard(props) {
         } else if (voteDirection === 'down') {
             setVoteAction.payload = { downvotes: downvotes + 1 }
         }
-        console.log('vote action: ', setVoteAction)
 
         dispatch(setVoteAction);
     }
 
-
-    return  <section>   
-                <h4>{props.meme.title}</h4>
-                <img src={props.meme.img} alt="meme"/>
-                <p>Votes {props.meme.upvotes - props.meme.downvotes}</p>
-                <button onClick={() => handleVote('up')}  class="btn btn-primary"> + </button>
-                <button onClick={() => handleVote('down')} class="btn btn-secondary"> - </button>
-            </section>
+    return  <Card className="text-center meme-card bg-light" border="dark">
+                <Card.Body>
+                    <Card.Title>{props.meme.title}</Card.Title>
+                    <Card.Img variant="top" src={props.meme.img}/>
+                    <Card.Text>Upvotes: {props.meme.upvotes}  Downvotes: {props.meme.downvotes}</Card.Text>
+                    <Button variant="secondary" className="btn btn-vote-up" onClick={() => handleVote('up')}> + </Button>
+                    <Button variant="secondary" className="btn btn-vote-down" onClick={() => handleVote('down')}> - </Button>
+                </Card.Body>
+            </Card>
 }

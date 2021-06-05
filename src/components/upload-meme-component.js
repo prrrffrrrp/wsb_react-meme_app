@@ -1,3 +1,5 @@
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form'
 import { useState } from 'react';
 import { useDispatch, useSelector } from "react-redux";
 
@@ -21,7 +23,6 @@ export default function UploadMeme() {
     const resetUploadMemePage = () => {
         setFormData({ ...initialFormData });
         setShowSucces(true);
-        console.log('showSuccess: ', showSuccess);
         setTimeout(() => setShowSucces(false), 2000);
     }
 
@@ -45,28 +46,28 @@ export default function UploadMeme() {
 
     return <div>
         <h1>Upload your own memes</h1>
-        <form onSubmit={handleAddMeme}>
-            <label>
-                title: 
-                <input 
+        <Form onSubmit={handleAddMeme}>
+            <Form.Group controlId="formTitle">
+                <Form.Label>title:</Form.Label>
+                <Form.Control 
                     type="text" 
                     name="title" 
                     placeholder='type a title' 
                     required value={formData.title} 
                     onChange={handleFormData}/>
-            </label>
-            <label>
-                image url:
-                <input 
+            </Form.Group>
+            <Form.Group controlId="formUrl">
+                <Form.Label>image url:</Form.Label>
+                <Form.Control 
                     type="url" 
                     name="url" 
                     placeholder='type an url' 
                     required accept='image/*' 
                     value={formData.url} 
                     onChange={handleFormData}/>
-            </label>
-            <input type="submit" value="Upload"/>
-        </form>
+            </Form.Group>
+            <Button type="submit" variant="light">Submit</Button>
+        </Form>
         <ShowSuccessMessage showSuccess={showSuccess}/>
         
     </div>

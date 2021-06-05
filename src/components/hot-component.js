@@ -1,15 +1,21 @@
-import MemeCard from "./meme-card-component"
+import CardColumns from 'react-bootstrap/CardColumns'
 import { useSelector } from "react-redux";
 
+import MemeCard from "./meme-card-component"
+
+
 export default function Hot() {
+    const stateH = useSelector(state => state);
     const hotMemes = useSelector(state => Object.values(state).filter(m => Number(m.upvotes - m.downvotes) >= 5));
 
     if (hotMemes.length) {
     return  <div>
             <h1>HOT</h1>
-            {
-                hotMemes.map((m, i) => (<MemeCard key={i} meme={m} />))
-            }
+            <CardColumns>
+                {
+                    hotMemes.map((m, i) => (<MemeCard key={i} meme={m} />))
+                }
+            </CardColumns>
             </div>
     } else {
     return <div>

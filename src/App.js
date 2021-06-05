@@ -1,9 +1,9 @@
 import {BrowserRouter as Router, NavLink, Redirect, Route, Switch} from 'react-router-dom';
-import { useState } from "react";
+import Navbar from 'react-bootstrap/Navbar'
+import Nav from 'react-bootstrap/Nav'
 import './App.css';
 
 import Error from './components/error-component';
-import Header from './components/header-component';
 import Hot from './components/hot-component';
 import Regular from './components/regular-component';
 import UploadMeme from './components/upload-meme-component';
@@ -12,26 +12,26 @@ import UploadMeme from './components/upload-meme-component';
 function App() {
     return (
     <div className="App">
-        <Header/>
         <Router>
-                <ul className="nav">
+            <Navbar bg="light" expand="lg" sticky="top">
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav">
 
-                    <li className="nav-item">
-                        <NavLink to='/hot'>Hot</NavLink>
-                    </li>
+                    <Nav className="mr-auto">
+                        <NavLink className='nav-link navbar-item nav-pages-left nav-regular' to="/regular">Regular</NavLink>
+                        <NavLink className='nav-link navbar-item nav-pages-left nav-hot' to="/hot">Hot</NavLink>
+                    </Nav>
 
-                    <li className="nav-item">
-                        <NavLink to='/regular'>Regular</NavLink>
-                    </li>
+                    <Navbar.Brand className='brand'><h1>Meme Ranking</h1></Navbar.Brand>
 
-                    <li className="nav-item nav-upload">
-                        <NavLink to='/upload-meme'>Upload Meme</NavLink>
-                    </li>
+                    <Nav className="ml-auto nav-pages-right">
+                        <NavLink className='nav-link navbar-item nav-upload' to="/upload-meme">Upload Meme</NavLink>
+                    </Nav>
 
-                </ul>
+                </Navbar.Collapse>
 
+            </Navbar>
                 <Switch>
-
                     <Route exact path={['/', '/regular']}>
                         <Regular />
                     </Route>
