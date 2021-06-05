@@ -1,13 +1,14 @@
 import MemeCard from "./meme-card-component"
+import { useSelector } from "react-redux";
 
-export default function Regular(props) {
-    const regularMemes = props.memes.filter(m => Number(m.upvotes - m.downvotes) < 5)
+export default function Regular() {
+    const regularMemes = useSelector(state => Object.values(state).filter(m => Number(m.upvotes - m.downvotes) < 5));
 
     if (regularMemes.length) {
         return  <div>
                 <h1>REGULAR</h1>
                 {
-                    regularMemes.map((m, i) => (<MemeCard key={i} meme={m} voteOnMeme={props.voteOnMeme}/>))
+                    regularMemes.map((m, i) => (<MemeCard key={i} meme={m} />))
                 }
                 </div>
     } else {
