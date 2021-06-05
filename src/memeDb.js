@@ -27,5 +27,12 @@ export let memeDb = {
                 upvotes: 10,
                 downvotes: 3,
                 img: "meme4.jpg",
+            },
+            4: {
+                id: 4,
+                title: "Space Cat",
+                upvotes: 0,
+                downvotes: 0,
+                img: "https://i.imgur.com/IZvHqDW.jpeg"
             }
         };
