@@ -23,7 +23,7 @@ form{
     margin: 5% 15%;
 }
 
-h1 {
+h1, h4{
     padding: 20px;
     text-align: center;
 }
@@ -34,13 +34,16 @@ h1 {
 
 .navbar-brand {
     text-align: center;
-    font-size: 2rem !important;
+}
+
+.navbar-brand h1 {
+    font-size: 6rem;
+    color: #C9E7DF;
 }
 
 .navbar-item {
     padding: 20px;
     margin-top: 2.5rem;
-    color: gray;
     text-decoration: none;
     text-size-adjust: 2rem;
     font-weight: bold;

@@ -3,7 +3,7 @@ import Form from 'react-bootstrap/Form'
 import { useState } from 'react';
 import { useDispatch, useSelector } from "react-redux";
 
-import ShowSuccessMessage from "./show-success-component"
+import ShowSuccessMessage from "./ShowSuccessComponent"
 
 
 export default function UploadMeme() {
@@ -46,7 +46,7 @@ export default function UploadMeme() {
     }
 
     return <div>
-        <h1>Upload your own memes</h1>
+        <h1>upload your own memes</h1>
         <Form onSubmit={handleAddMeme}>
             <Form.Group controlId="formTitle">
                 <Form.Label>title:</Form.Label>
@@ -67,7 +67,7 @@ export default function UploadMeme() {
                     value={formData.url} 
                     onChange={handleFormData}/>
             </Form.Group>
-            <Button type="submit" variant="light">Submit</Button>
+            <Button type="submit" variant="light">submit</Button>
             <ShowSuccessMessage showSuccess={showSuccess}/>
         </Form>
         
