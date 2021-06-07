@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 
+
 export default function MemeCard(props) {
     const memeId = props.meme.id;
     const dispatch = useDispatch();

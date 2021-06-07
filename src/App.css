@@ -1,6 +1,31 @@
+.alert {
+    text-align: center;
+    margin: 10%;
+}
+
+.btn {
+    margin: 0.5em;
+}
+
+.card {
+    text-align: center;
+    margin: auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    width: 30rem;
+}
 
 .card-columns {
     margin: 5% 10%;
+}
+
+form{
+    margin: 5% 15%;
+}
+
+h1 {
+    padding: 20px;
+    text-align: center;
 }
 
 .navbar {
@@ -19,26 +44,5 @@
     text-decoration: none;
     text-size-adjust: 2rem;
     font-weight: bold;
-    text-align: center;
-}
-
-.card {
-    text-align: center;
-    margin: auto;
-    margin-top: 2em;
-    margin-bottom: 2em;
-    width: 30rem;
-}
-
-form{
-    margin: 5% 15%;
-}
-
-.btn {
-    margin: 0.5em;
-}
-
-h1 {
-    padding: 20px;
     text-align: center;
 }

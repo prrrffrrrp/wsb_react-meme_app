@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 import ShowSuccessMessage from "./show-success-component"
 
+
 export default function UploadMeme() {
     const dispatch = useDispatch();
     const currentHigherId = useSelector(state => Object.keys(state).reduce((a, b) => state[a] > state[b] ? a : b));
@@ -23,7 +24,7 @@ export default function UploadMeme() {
     const resetUploadMemePage = () => {
         setFormData({ ...initialFormData });
         setShowSucces(true);
-        setTimeout(() => setShowSucces(false), 2000);
+        setTimeout(() => setShowSucces(false), 3000);
     }
 
     const handleAddMeme = (e) => {
@@ -67,8 +68,8 @@ export default function UploadMeme() {
                     onChange={handleFormData}/>
             </Form.Group>
             <Button type="submit" variant="light">Submit</Button>
+            <ShowSuccessMessage showSuccess={showSuccess}/>
         </Form>
-        <ShowSuccessMessage showSuccess={showSuccess}/>
         
     </div>
 }

@@ -18,14 +18,14 @@ function App() {
                 <Navbar.Collapse id="basic-navbar-nav">
 
                     <Nav className="mr-auto">
-                        <NavLink className='nav-link navbar-item nav-pages-left nav-regular' to="/regular">Regular</NavLink>
-                        <NavLink className='nav-link navbar-item nav-pages-left nav-hot' to="/hot">Hot</NavLink>
+                        <NavLink className='nav-link navbar-item' to="/regular">Regular</NavLink>
+                        <NavLink className='nav-link navbar-item' to="/hot">Hot</NavLink>
                     </Nav>
 
                     <Navbar.Brand className='brand'><h1>Meme Ranking</h1></Navbar.Brand>
 
                     <Nav className="ml-auto nav-pages-right">
-                        <NavLink className='nav-link navbar-item nav-upload' to="/upload-meme">Upload Meme</NavLink>
+                        <NavLink className='nav-link navbar-item' to="/upload-meme">Upload Meme</NavLink>
                     </Nav>
 
                 </Navbar.Collapse>
