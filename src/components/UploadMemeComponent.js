@@ -3,13 +3,14 @@ import Form from 'react-bootstrap/Form'
 import { useState } from 'react';
 import { useDispatch, useSelector } from "react-redux";
 
-import ShowSuccessMessage from "./ShowSuccessComponent"
+import ShowSuccessMessage from "./ShowSuccessComponent";
+import { addMemeAction } from "../store/actions/globalActions";
 
 
 export default function UploadMeme() {
     const dispatch = useDispatch();
-    const currentHigherId = useSelector(state => Object.keys(state).reduce((a, b) => state[a] > state[b] ? a : b));
 
+    const currentHigherId = useSelector(state => state.memes.reduce((a, b) => state[a] > state[b] ? a : b)).id;
     const initialFormData = { title: '', url: '' };
     const [formData, setFormData] = useState(initialFormData)
     const [showSuccess, setShowSucces] = useState(false)
@@ -29,19 +30,7 @@ export default function UploadMeme() {
 
     const handleAddMeme = (e) => {
         e.preventDefault()
-        const addMemeAction = {
-            type: 'ADD_MEME',
-            id: Number(currentHigherId) + 1,
-            payload: {
-                id: Number(currentHigherId) + 1,
-                title: formData.title,
-                upvotes: 0,
-                downvotes: 0,
-                img: formData.url
-            }
-        }
-        
-        dispatch(addMemeAction);
+        dispatch(addMemeAction(currentHigherId, formData));
         resetUploadMemePage();
     }
 
