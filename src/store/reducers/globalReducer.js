@@ -4,33 +4,28 @@ const initialState = {
   memes: memeDb,
 };
 
+const updateUpVote = (meme) => ({ ...meme, upvotes: meme.upvotes + 1 });
+
+const updateDownVote = (meme) => ({ ...meme, downvotes: meme.downvotes + 1 });
+
+const vote = (memeId, memes, updateVotesCallback) => memes.map((meme) => {
+  if (meme.id !== memeId) {
+    return meme;
+  }
+  return updateVotesCallback(meme);
+});
+
 export const globalReducer = (state = initialState, action) => {
-  const targetMeme = (memeId) => state.memes.find((m) => m.id === memeId);
-
-  const updateUpVote = (meme) => ({ ...meme, upvotes: meme.upvotes + 1 });
-
-  const updateDownVote = (meme) => ({ ...meme, downvotes: meme.downvotes + 1 });
-
-  const vote = (memeId, updateVotesCallback, targetMemeCallback) => {
-    const memeFound = targetMemeCallback(memeId);
-    return state.memes.map((meme) => {
-      if (meme !== memeFound) {
-        return meme;
-      }
-      return updateVotesCallback(meme);
-    });
-  };
-
   switch (action.type) {
     case 'UPVOTE': {
-      const newArrayUpvote = vote(action.id, updateUpVote, targetMeme);
+      const newArrayUpvote = vote(action.id, state.memes, updateUpVote);
       return {
         ...state,
         memes: newArrayUpvote,
       };
     }
     case 'DOWNVOTE': {
-      const newArrayDowvote = vote(action.id, updateDownVote, targetMeme);
+      const newArrayDowvote = vote(action.id, state.memes, updateDownVote);
       return {
         ...state,
         memes: newArrayDowvote,
