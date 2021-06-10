@@ -1,6 +1,6 @@
-import {BrowserRouter as Router, NavLink, Redirect, Route, Switch} from 'react-router-dom';
-import Navbar from 'react-bootstrap/Navbar'
-import Nav from 'react-bootstrap/Nav'
+import {BrowserRouter as Router, NavLink, Route, Switch} from 'react-router-dom';
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
 import './App.css';
 
 import Error from './components/ErrorComponent';
@@ -9,47 +9,47 @@ import UploadMeme from './components/UploadMemeComponent';
 
 
 function App() {
-    return (
+  return (
     <div className="App">
-        <Router>
-            <Navbar bg="light" expand="lg" sticky="top">
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav">
+      <Router>
+        <Navbar bg="light" expand="lg" sticky="top">
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
 
-                    <Nav className="mr-auto">
-                        <NavLink className='nav-link navbar-item' to="/regular">regular</NavLink>
-                        <NavLink className='nav-link navbar-item' to="/hot">hot</NavLink>
-                    </Nav>
+            <Nav className="mr-auto">
+              <NavLink className='nav-link navbar-item' to="/regular">regular</NavLink>
+              <NavLink className='nav-link navbar-item' to="/hot">hot</NavLink>
+            </Nav>
 
-                    <Navbar.Brand className='brand'><h1>meme ranking</h1></Navbar.Brand>
+            <Navbar.Brand className='brand'><h1>meme ranking</h1></Navbar.Brand>
 
-                    <Nav className="ml-auto nav-pages-right">
-                        <NavLink className='nav-link navbar-item' to="/upload-meme">upload meme</NavLink>
-                    </Nav>
+            <Nav className="ml-auto nav-pages-right">
+              <NavLink className='nav-link navbar-item' to="/upload-meme">upload meme</NavLink>
+            </Nav>
 
-                </Navbar.Collapse>
+          </Navbar.Collapse>
 
-            </Navbar>
-                <Switch>
-                    <Route exact path={['/', '/regular']}>
-                        <MemeRouter route={'regular'} />
-                    </Route>
+        </Navbar>
+        <Switch>
+          <Route exact path={['/', '/regular']}>
+            <MemeRouter route={MEME_TYPE.REGULAR} />
+          </Route>
 
-                    <Route exact path='/hot'>
-                        <MemeRouter route={'hot'} />
-                    </Route>
+          <Route exact path='/hot'>
+            <MemeRouter route={MEME_TYPE.HOT} />
+          </Route>
 
-                    <Route exact path='/upload-meme'>
-                        <UploadMeme />
-                    </Route>
+          <Route exact path='/upload-meme'>
+            <UploadMeme />
+          </Route>
 
-                    <Route exact path='*'>
-                        <Error/>
-                    </Route>
+          <Route exact path='*'>
+            <Error/>
+          </Route>
 
-                </Switch>
+        </Switch>
 
-            </Router>
+      </Router>
     </div>
   );
 }

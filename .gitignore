@@ -27,3 +27,6 @@ tags
 tags*
 .tags
 tags/*
+
+# eslint
+.eslintrc.js

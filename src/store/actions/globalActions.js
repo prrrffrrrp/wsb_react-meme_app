@@ -1,5 +1,7 @@
+import { VOTE_DIRECTION } from '../../ProjectEnums';
+
 export const setVoteAction = (voteDirection, memeId) => {
-    if (voteDirection === 'up') {
+    if (voteDirection === VOTE_DIRECTION.UP) {
         return {
             type: 'UPVOTE',
             id: memeId,
@@ -24,4 +26,3 @@ export const addMemeAction = (currentHigherId, {title, url}) => {
         }
     }
 }
-
