@@ -1,10 +1,10 @@
 import Alert from 'react-bootstrap/Alert';
 
-export default function ShowSuccessMessage({ showSuccess }) {
-  if (showSuccess) {
+export default function AlertMessage({ showMessage, messageContent }) {
+  if (showMessage) {
     return (
       <Alert variant="info">
-        Your meme has been submited!
+        {messageContent}
       </Alert>
     );
   }

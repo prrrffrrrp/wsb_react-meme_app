@@ -3,7 +3,7 @@ import Form from 'react-bootstrap/Form';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 
-import ShowSuccessMessage from './ShowSuccessComponent';
+import AlertMessage from './AlertMessageComponent';
 import { addMemeAction } from '../store/actions/globalActions';
 
 export default function UploadMeme() {
@@ -60,7 +60,7 @@ export default function UploadMeme() {
           />
         </Form.Group>
         <Button type="submit" variant="light">submit</Button>
-        <ShowSuccessMessage showSuccess={showSuccess} />
+        <AlertMessage showMessage={showSuccess} messageContent="Your meme has been submited!" />
       </Form>
 
     </div>
