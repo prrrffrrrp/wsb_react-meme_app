@@ -4,11 +4,11 @@ import { MEME_TYPE } from '../ProjectEnums';
 
 export default function MemeRouter({ route }) {
   const hotMemes = useSelector(
-    (state) => Object.values(state.memes)
+    (state) => state.memes
       .filter((m) => Number(m.upvotes - m.downvotes) >= 5),
   );
   const regularMemes = useSelector(
-    (state) => Object.values(state.memes)
+    (state) => state.memes
       .filter((m) => Number(m.upvotes - m.downvotes) < 5),
   );
 

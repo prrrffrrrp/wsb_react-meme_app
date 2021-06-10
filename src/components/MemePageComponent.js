@@ -8,8 +8,8 @@ export default function MemePage({ memes, route }) {
         <h1>{route}</h1>
         <CardColumns>
           {
-                            memes.map((m) => (<MemeCard meme={m} key={m.id} />))
-                        }
+            memes.map((m) => (<MemeCard meme={m} key={m.id} />))
+          }
         </CardColumns>
       </div>
     );
