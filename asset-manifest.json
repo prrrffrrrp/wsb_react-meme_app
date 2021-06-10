@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/wsb_react-meme_app/static/css/main.3f26e182.chunk.css",
+    "main.js": "/wsb_react-meme_app/static/js/main.5ba53645.chunk.js",
+    "main.js.map": "/wsb_react-meme_app/static/js/main.5ba53645.chunk.js.map",
+    "runtime-main.js": "/wsb_react-meme_app/static/js/runtime-main.0b75bc2f.js",
+    "runtime-main.js.map": "/wsb_react-meme_app/static/js/runtime-main.0b75bc2f.js.map",
+    "static/css/2.4c97ca4f.chunk.css": "/wsb_react-meme_app/static/css/2.4c97ca4f.chunk.css",
+    "static/js/2.ad341730.chunk.js": "/wsb_react-meme_app/static/js/2.ad341730.chunk.js",
+    "static/js/2.ad341730.chunk.js.map": "/wsb_react-meme_app/static/js/2.ad341730.chunk.js.map",
+    "static/js/3.82ec064a.chunk.js": "/wsb_react-meme_app/static/js/3.82ec064a.chunk.js",
+    "static/js/3.82ec064a.chunk.js.map": "/wsb_react-meme_app/static/js/3.82ec064a.chunk.js.map",
+    "index.html": "/wsb_react-meme_app/index.html",
+    "static/css/2.4c97ca4f.chunk.css.map": "/wsb_react-meme_app/static/css/2.4c97ca4f.chunk.css.map",
+    "static/css/main.3f26e182.chunk.css.map": "/wsb_react-meme_app/static/css/main.3f26e182.chunk.css.map",
+    "static/js/2.ad341730.chunk.js.LICENSE.txt": "/wsb_react-meme_app/static/js/2.ad341730.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0b75bc2f.js",
+    "static/css/2.4c97ca4f.chunk.css",
+    "static/js/2.ad341730.chunk.js",
+    "static/css/main.3f26e182.chunk.css",
+    "static/js/main.5ba53645.chunk.js"
+  ]
+}
