@@ -1,9 +1,9 @@
 export const MEME_TYPE = {
-    HOT: 'hot',
-    REGULAR: 'regular',
+  HOT: 'hot',
+  REGULAR: 'regular',
 };
 
 export const VOTE_DIRECTION = {
-    UP: 'up',
-    DOWN: 'down'
+  UP: 'up',
+  DOWN: 'down',
 };
