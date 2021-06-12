@@ -3,34 +3,34 @@ import { v4 as uuidv4 } from 'uuid';
 export const memeDb = [
   {
     id: uuidv4(),
-    title: 'meme 1',
+    title: 'broken egg',
     upvotes: 1,
     downvotes: 0,
-    img: 'meme1.png',
+    img: 'https://i.postimg.cc/hPsZpfch/7h08Otr.jpg',
     starred: false,
   },
   {
     id: uuidv4(),
-    title: 'meme 2',
+    title: 'Rest',
     upvotes: 6,
     downvotes: 0,
-    img: 'meme2.jpeg',
+    img: 'https://i.postimg.cc/jqzFnM1H/9fFD7Sh.jpg',
     starred: false,
   },
   {
     id: uuidv4(),
-    title: 'meme 3',
+    title: 'killem all',
     upvotes: 1,
     downvotes: 6,
-    img: 'meme3.jpg',
+    img: 'https://i.postimg.cc/kGFYr5S1/AySFpJC.jpg',
     starred: false,
   },
   {
     id: uuidv4(),
-    title: 'meme 4',
+    title: 'extra hell',
     upvotes: 10,
     downvotes: 3,
-    img: 'meme4.jpg',
+    img: 'https://i.postimg.cc/SxKT5kxd/K618E0X.jpg',
     starred: false,
   },
   {
@@ -49,5 +49,12 @@ export const memeDb = [
     img: 'https://i.imgur.com/CjZgiwh.jpeg',
     starred: false,
   },
-
+  {
+    id: uuidv4(),
+    title: 'zebra',
+    upvotes: 0,
+    downvotes: 0,
+    img: 'https://i.postimg.cc/QxhnQpLR/mU6rAFB.jpg',
+    starred: false,
+  },
 ];
