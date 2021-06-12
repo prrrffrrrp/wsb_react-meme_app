@@ -1,4 +1,5 @@
 import { useDispatch } from 'react-redux';
+
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -6,7 +7,7 @@ import { faStar as fasStar } from '@fortawesome/free-solid-svg-icons';
 import { faThumbsUp, faThumbsDown, faStar as farStar } from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import { setVoteAction } from '../store/actions/globalActions';
+import { setVoteAction, setStarredAction } from '../store/actions/globalActions';
 import { VOTE_DIRECTION } from '../ProjectEnums';
 
 library.add(faThumbsUp, faThumbsDown, fasStar, farStar);
@@ -18,12 +19,16 @@ export default function MemeCard({ meme }) {
     dispatch(setVoteAction(voteDirection, meme.id));
   };
 
+  const handleStarred = () => {
+    dispatch(setStarredAction(meme.id));
+  };
+
   return (
     <Card className="text-center meme-card bg-light" border="dark">
       <Card.Body>
         <div className="container-header">
           <Card.Title>{meme.title}</Card.Title>
-          <FontAwesomeIcon icon={farStar} />
+          <FontAwesomeIcon onClick={handleStarred} icon={meme.starred ? fasStar : farStar} />
         </div>
         <Card.Img variant="top" src={meme.img} />
 

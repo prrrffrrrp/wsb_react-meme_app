@@ -7,6 +7,7 @@ export const memeDb = [
     upvotes: 1,
     downvotes: 0,
     img: 'meme1.png',
+    starred: false,
   },
   {
     id: uuidv4(),
@@ -14,6 +15,7 @@ export const memeDb = [
     upvotes: 6,
     downvotes: 0,
     img: 'meme2.jpeg',
+    starred: false,
   },
   {
     id: uuidv4(),
@@ -21,6 +23,7 @@ export const memeDb = [
     upvotes: 1,
     downvotes: 6,
     img: 'meme3.jpg',
+    starred: false,
   },
   {
     id: uuidv4(),
@@ -28,6 +31,7 @@ export const memeDb = [
     upvotes: 10,
     downvotes: 3,
     img: 'meme4.jpg',
+    starred: false,
   },
   {
     id: uuidv4(),
@@ -35,6 +39,7 @@ export const memeDb = [
     upvotes: 0,
     downvotes: 0,
     img: 'https://i.imgur.com/IZvHqDW.jpeg',
+    starred: false,
   },
   {
     id: uuidv4(),
@@ -42,6 +47,7 @@ export const memeDb = [
     upvotes: 0,
     downvotes: 0,
     img: 'https://www.w3schools.com/css/img_5terre_wide.jpg',
+    starred: false,
   },
 
 ];

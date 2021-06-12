@@ -4,7 +4,7 @@ import Nav from 'react-bootstrap/Nav';
 
 export default function Navigation() {
   return (
-    <Navbar expand="lg" sticky="top">
+    <Navbar bg="light" expand="lg" sticky="top">
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
 

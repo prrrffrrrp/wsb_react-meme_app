@@ -4,9 +4,11 @@ const initialState = {
   memes: memeDb,
 };
 
+const updateDownVote = (meme) => ({ ...meme, downvotes: meme.downvotes + 1 });
+
 const updateUpVote = (meme) => ({ ...meme, upvotes: meme.upvotes + 1 });
 
-const updateDownVote = (meme) => ({ ...meme, downvotes: meme.downvotes + 1 });
+const flipStarred = (meme) => ({ ...meme, starred: !meme.starred });
 
 const vote = (memeId, memes, updateVotesCallback) => memes.map((meme) => {
   if (meme.id !== memeId) {
@@ -17,11 +19,10 @@ const vote = (memeId, memes, updateVotesCallback) => memes.map((meme) => {
 
 export const globalReducer = (state = initialState, action) => {
   switch (action.type) {
-    case 'UPVOTE': {
-      const newArrayUpvote = vote(action.id, state.memes, updateUpVote);
+    case 'ADD_MEME': {
       return {
         ...state,
-        memes: newArrayUpvote,
+        memes: [...state.memes, action.payload],
       };
     }
     case 'DOWNVOTE': {
@@ -31,10 +32,18 @@ export const globalReducer = (state = initialState, action) => {
         memes: newArrayDowvote,
       };
     }
-    case 'ADD_MEME': {
+    case 'STAR': {
+      const newArrayStarred = vote(action.id, state.memes, flipStarred);
       return {
         ...state,
-        memes: [...state.memes, action.payload],
+        memes: newArrayStarred,
+      };
+    }
+    case 'UPVOTE': {
+      const newArrayUpvote = vote(action.id, state.memes, updateUpVote);
+      return {
+        ...state,
+        memes: newArrayUpvote,
       };
     }
     default: return { ...state };
