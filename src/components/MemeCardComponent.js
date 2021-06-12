@@ -28,7 +28,7 @@ export default function MemeCard({ meme }) {
       <Card.Body>
         <div className="container-header">
           <Card.Title>{meme.title}</Card.Title>
-          <FontAwesomeIcon onClick={handleStarred} icon={meme.starred ? fasStar : farStar} />
+          <FontAwesomeIcon onClick={handleStarred} icon={meme.starred ? fasStar : farStar} size="lg" />
         </div>
         <Card.Img variant="top" src={meme.img} />
 

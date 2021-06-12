@@ -4,23 +4,27 @@ import Nav from 'react-bootstrap/Nav';
 
 export default function Navigation() {
   return (
-    <Navbar bg="light" expand="lg" sticky="top">
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse id="basic-navbar-nav">
+    <div>
+      <Navbar className="py-0" bg="light" expand="lg" sticky="top">
+        <NavLink className="navbar-brand mx-auto" to="/home"><h1>memes_wtf</h1></NavLink>
+      </Navbar>
 
-        <Nav className="mr-auto nav-container">
-          <NavLink className="nav-link navbar-item" to="/regular">regular</NavLink>
-          <NavLink className="nav-link navbar-item" to="/hot">hot</NavLink>
-        </Nav>
+      <Navbar className="py-0" bg="light" expand="lg" sticky="top">
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
 
-        <NavLink className="navbar-brand" to="/home"><h1>memes_wtf</h1></NavLink>
+          <Nav className="mx-auto nav-container py-0">
+            <NavLink className="nav-link navbar-item py-0" to="/regular">regular</NavLink>
+            <NavLink className="nav-link navbar-item py-0" to="/hot">hot</NavLink>
+          </Nav>
 
-        <Nav className="ml-auto nav-pages-right">
-          <NavLink className="nav-link navbar-item" to="/upload-meme">upload meme</NavLink>
-        </Nav>
+          <Nav className="mx-auto py-0">
+            <NavLink className="nav-link navbar-item py-0" to="/upload-meme">upload meme</NavLink>
+          </Nav>
 
-      </Navbar.Collapse>
+        </Navbar.Collapse>
 
-    </Navbar>
+      </Navbar>
+    </div>
   );
 }
