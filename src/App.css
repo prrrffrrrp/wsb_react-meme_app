@@ -1,51 +1,94 @@
+html {
+  background-color: #f4f1de;
+}
+
+.App {
+  background-color: #f4f1de;
+}
+
 .alert {
-    text-align: center;
-    margin: 10%;
+  text-align: center;
+  margin: 10%;
 }
 
 .btn {
-    margin: 0.5em;
+  margin: 0.5em;
+  max-height: 4rem;
+  width: 40%;
+}
+
+.btn-info,
+.btn-info:hover,
+.btn-info:active,
+.btn-info:visited {
+  background-color: #81b29a !important;
+  border-color: #81b29a !important;
+}
+
+/* #c9d7df */
+.btn-text {
+  padding: 0.5em;
+  font-size: 0.8em;
+  text-align: center;
 }
 
 .card {
-    text-align: center;
-    margin: auto;
-    margin-top: 2em;
-    margin-bottom: 2em;
-    width: 30rem;
+  text-align: center;
+  margin: auto;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  width: 30rem;
+  /* background-color: #f4f1de; */
+}
+
+.card-title {
+  text-align: left;
 }
 
 .card-columns {
-    margin: 5% 10%;
+  margin: 5% 10%;
+  /* background-color: #f4f1de !important; */
 }
 
-form{
-    margin: 5% 15%;
+.container-header {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  align-content: center;
 }
 
-h1, h4{
-    padding: 20px;
-    text-align: center;
+.fa-star {
+  color: #f2cc8f;
+}
+
+form {
+  margin: 5% 15%;
+}
+
+h1,
+h4 {
+  padding: 20px;
+  text-align: center;
 }
 
 .navbar {
-    min-height: 100px;
+  min-height: 100px;
 }
 
 .navbar-brand {
-    text-align: center;
+  text-align: center;
 }
 
 .navbar-brand h1 {
-    font-size: 6rem;
-    color: #C9E7DF;
+  font-size: 6rem;
+  color: #81b29a;
 }
 
 .navbar-item {
-    padding: 20px;
-    margin-top: 2.5rem;
-    text-decoration: none;
-    text-size-adjust: 2rem;
-    font-weight: bold;
-    text-align: center;
+  padding: 20px;
+  margin-top: 2.5rem;
+  text-decoration: none;
+  text-size-adjust: 2rem;
+  font-weight: bold;
+  text-align: center;
 }
