@@ -11,10 +11,15 @@ html {
   margin: 10%;
 }
 
-.btn {
-  margin: 0.5em;
+.btn-vote {
+  margin: 0.5rem;
+  margin-top: 1.5rem;
   max-height: 4rem;
   width: 40%;
+}
+
+.btn-upload-form {
+  color: #81b29a;
 }
 
 .btn-info,
@@ -25,7 +30,6 @@ html {
   border-color: #81b29a !important;
 }
 
-/* #c9d7df */
 .btn-text {
   padding: 0.5em;
   font-size: 0.8em;
@@ -43,16 +47,13 @@ html {
 
 .card-title {
   text-align: left;
-}
-
-.card-columns {
-  margin: 5% 10%;
-  /* background-color: #f4f1de !important; */
+  color: #3d405b !important;
+  font-weight: bold !important;
 }
 
 .container-header {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: baseline;
   align-content: center;
 }
@@ -62,17 +63,37 @@ html {
 }
 
 form {
-  margin: 5% 15%;
+  margin: auto;
+  margin-top: 5%;
+  width: 60%;
 }
 
-h1,
-h4 {
-  padding: 20px;
-  text-align: center;
+label {
+  color: #3d405b;
 }
 
 .navbar {
   min-height: 100px;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+}
+
+.nav-link {
+  font-size: 1.5rem;
+  color: #3d405b !important;
+}
+
+.nav-link:hover {
+  color: lightslategrey !important;
+}
+
+.nav-link.active {
+  font-size: 1.7rem;
+  color: #e07a5f !important;
 }
 
 .navbar-brand {

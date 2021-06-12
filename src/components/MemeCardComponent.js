@@ -32,11 +32,12 @@ export default function MemeCard({ meme }) {
         </div>
         <Card.Img variant="top" src={meme.img} />
 
-        <Button variant="info" onClick={() => handleVote(VOTE_DIRECTION.UP)}>
+        <Button className="btn-vote" variant="info" onClick={() => handleVote(VOTE_DIRECTION.UP)}>
           <FontAwesomeIcon icon={['far', 'thumbs-up']} size="lg" />
           <p className="btn-text">{meme.upvotes}</p>
         </Button>
-        <Button variant="info" onClick={() => handleVote(VOTE_DIRECTION.DOWN)}>
+
+        <Button className="btn-vote" variant="info" onClick={() => handleVote(VOTE_DIRECTION.DOWN)}>
           <FontAwesomeIcon icon={faThumbsDown} size="lg" />
           <p className="btn-text">{meme.downvotes}</p>
         </Button>

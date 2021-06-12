@@ -33,36 +33,36 @@ export default function UploadMeme() {
   };
 
   return (
-    <div>
-      <h1>upload your own memes</h1>
-      <Form onSubmit={handleAddMeme}>
-        <Form.Group controlId="formTitle">
-          <Form.Label>title:</Form.Label>
-          <Form.Control
-            type="text"
-            name="title"
-            placeholder="type a title"
-            required
-            value={formData.title}
-            onChange={handleFormData}
-          />
-        </Form.Group>
-        <Form.Group controlId="formUrl">
-          <Form.Label>image url:</Form.Label>
-          <Form.Control
-            type="url"
-            name="url"
-            placeholder="type an url"
-            required
-            accept="image/*"
-            value={formData.url}
-            onChange={handleFormData}
-          />
-        </Form.Group>
-        <Button type="submit" variant="light">submit</Button>
-        <AlertMessage showMessage={showSuccess} messageContent="Your meme has been submited!" />
-      </Form>
+    <Form onSubmit={handleAddMeme}>
 
-    </div>
+      <Form.Group controlId="formTitle">
+        <Form.Label>title:</Form.Label>
+        <Form.Control
+          type="text"
+          name="title"
+          placeholder="type a title"
+          required
+          value={formData.title}
+          onChange={handleFormData}
+        />
+      </Form.Group>
+
+      <Form.Group controlId="formUrl">
+        <Form.Label>image url:</Form.Label>
+        <Form.Control
+          type="url"
+          name="url"
+          placeholder="type an url"
+          required
+          accept="image/*"
+          value={formData.url}
+          onChange={handleFormData}
+        />
+      </Form.Group>
+
+      <Button className="btn-upload-form" type="submit" variant="info">submit</Button>
+      <AlertMessage showMessage={showSuccess} messageContent="Your meme has been submited!" />
+
+    </Form>
   );
 }

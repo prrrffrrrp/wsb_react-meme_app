@@ -43,10 +43,10 @@ export const memeDb = [
   },
   {
     id: uuidv4(),
-    title: 'Landscape',
+    title: "Dog's mess",
     upvotes: 0,
     downvotes: 0,
-    img: 'https://www.w3schools.com/css/img_5terre_wide.jpg',
+    img: 'https://i.imgur.com/CjZgiwh.jpeg',
     starred: false,
   },
 

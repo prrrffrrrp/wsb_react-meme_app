@@ -1,16 +1,14 @@
-import CardColumns from 'react-bootstrap/CardColumns';
 import MemeCard from './MemeCardComponent';
 
 export default function MemePage({ memes, route }) {
   if (memes.length) {
     return (
       <div>
-        <h1>{route}</h1>
-        <CardColumns>
+        <div className="container">
           {
             memes.map((m) => (<MemeCard meme={m} key={m.id} />))
           }
-        </CardColumns>
+        </div>
       </div>
     );
   }

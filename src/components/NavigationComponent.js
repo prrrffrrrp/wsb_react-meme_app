@@ -8,7 +8,7 @@ export default function Navigation() {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
 
-        <Nav className="mr-auto">
+        <Nav className="mr-auto nav-container">
           <NavLink className="nav-link navbar-item" to="/regular">regular</NavLink>
           <NavLink className="nav-link navbar-item" to="/hot">hot</NavLink>
         </Nav>
