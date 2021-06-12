@@ -13,7 +13,7 @@ export default function Navigation() {
           <NavLink className="nav-link navbar-item" to="/hot">hot</NavLink>
         </Nav>
 
-        <Navbar.Brand className="brand"><h1>meme ranking</h1></Navbar.Brand>
+        <NavLink className="navbar-brand" to="/home"><h1>memes_wtf</h1></NavLink>
 
         <Nav className="ml-auto nav-pages-right">
           <NavLink className="nav-link navbar-item" to="/upload-meme">upload meme</NavLink>

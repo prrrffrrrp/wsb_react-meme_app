@@ -19,7 +19,7 @@ html {
 }
 
 .btn-upload-form {
-  color: #81b29a;
+  background-color: #81b29a;
 }
 
 .btn-info,
@@ -68,6 +68,22 @@ form {
   width: 60%;
 }
 
+footer {
+  margin: auto;
+  margin-top: 10%;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #3d405b;
+  text-align: center;
+  justify-content: center;
+}
+
+h1,
+h4 {
+  color: #3d405b;
+  padding: 10%;
+}
+
 label {
   color: #3d405b;
 }
@@ -96,18 +112,15 @@ label {
   color: #e07a5f !important;
 }
 
-.navbar-brand {
+.navbar-brand h1 {
+  font-size: 6rem;
+  font-weight: bold;
+  color: #81b29a;
   text-align: center;
 }
 
-.navbar-brand h1 {
-  font-size: 6rem;
-  color: #81b29a;
-}
-
 .navbar-item {
-  padding: 20px;
-  margin-top: 2.5rem;
+  margin-top: 2rem;
   text-decoration: none;
   text-size-adjust: 2rem;
   font-weight: bold;

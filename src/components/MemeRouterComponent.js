@@ -3,17 +3,18 @@ import MemePage from './MemePageComponent';
 import { MEME_TYPE } from '../ProjectEnums';
 
 export default function MemeRouter({ route }) {
-  const hotMemes = useSelector(
-    (state) => state.memes
-      .filter((m) => Number(m.upvotes - m.downvotes) >= 5),
-  );
-  const regularMemes = useSelector(
-    (state) => state.memes
-      .filter((m) => Number(m.upvotes - m.downvotes) < 5),
-  );
+  const allMemes = useSelector((state) => state.memes);
 
-  if (route === MEME_TYPE.HOT) {
-    return <MemePage memes={hotMemes} route={route} />;
+  const hotMemes = allMemes.filter((m) => Number(m.upvotes - m.downvotes) >= 5);
+
+  const regularMemes = allMemes.filter((m) => Number(m.upvotes - m.downvotes) < 5);
+
+  switch (route) {
+    case MEME_TYPE.HOT:
+      return <MemePage memes={hotMemes} route={route} />;
+    case MEME_TYPE.REGULAR:
+      return <MemePage memes={regularMemes} route={route} />;
+    default:
+      return <MemePage memes={allMemes} route={route} />;
   }
-  return <MemePage memes={regularMemes} route={route} />;
 }

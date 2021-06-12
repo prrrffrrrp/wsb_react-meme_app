@@ -4,6 +4,7 @@ import {
 import './App.css';
 
 import Error from './components/ErrorComponent';
+import Footer from './components/FooterComponent';
 import MemeRouter from './components/MemeRouterComponent';
 import { MEME_TYPE } from './ProjectEnums';
 import Navigation from './components/NavigationComponent';
@@ -15,7 +16,12 @@ function App() {
       <Router>
         <Navigation />
         <Switch>
-          <Route exact path={['/', '/regular']}>
+
+          <Route exact path={['/', '/home']}>
+            <MemeRouter router={MEME_TYPE.ALL} />
+          </Route>
+
+          <Route exact path="/regular">
             <MemeRouter route={MEME_TYPE.REGULAR} />
           </Route>
 
@@ -32,6 +38,8 @@ function App() {
           </Route>
 
         </Switch>
+
+        <Footer />
       </Router>
     </div>
   );
