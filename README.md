@@ -4,6 +4,14 @@ _meme_wtf_ is a responsive react app that allows to sort your favorite memes.
 
 This project was realized during the post-graduate course _Programista frontend z Angularem_ at WSB Wrocław.
 
+## Stack
+- React
+- Redux
+- React-bootstrap
+- React-font-awesome
+- uuid
+- eslint
+
 ## Try it online
 https://prrrffrrrp.github.io/wsb_react-meme_app/
 
