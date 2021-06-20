@@ -3,14 +3,6 @@ import { v4 as uuidv4 } from 'uuid';
 export const memeDb = [
   {
     id: uuidv4(),
-    title: 'broken egg',
-    upvotes: 1,
-    downvotes: 0,
-    img: 'https://i.postimg.cc/hPsZpfch/7h08Otr.jpg',
-    starred: false,
-  },
-  {
-    id: uuidv4(),
     title: 'Rest',
     upvotes: 6,
     downvotes: 0,
@@ -55,6 +47,14 @@ export const memeDb = [
     upvotes: 0,
     downvotes: 0,
     img: 'https://i.postimg.cc/QxhnQpLR/mU6rAFB.jpg',
+    starred: false,
+  },
+  {
+    id: uuidv4(),
+    title: 'broken egg',
+    upvotes: 1,
+    downvotes: 0,
+    img: 'https://i.postimg.cc/hPsZpfch/7h08Otr.jpg',
     starred: false,
   },
 ];

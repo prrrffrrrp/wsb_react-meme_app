@@ -2,7 +2,7 @@
   "name": "meme-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://prrrffrrrp.github.io/wsb_react-meme_app",
+  "homepage": "https://prrrffrrrp.github.io/wsb_react-meme_app/",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-regular-svg-icons": "^5.15.3",
